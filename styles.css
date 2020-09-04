@@ -1,0 +1,414 @@
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  overflow-x: hidden;
+  background-color: #eee;
+  display: flex;
+  flex-direction: column;
+}
+
+nav{
+  display: flex;
+  position: fixed;
+  justify-content: center;
+  align-items: center;
+  padding: 2vh 0vh;
+  width: 100vw;
+  z-index: 2;
+  background: white;
+}
+.nav_items{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  list-style: none;
+  background-color: #7b03fc;
+  border: white 2px solid;
+  box-shadow: 3px 5px 8px white;
+  padding: 8px;
+  border-radius: 20px;
+  width: 80vw;
+}
+.nav_items a{
+  text-decoration: none;
+  color: white;
+  margin: 0 10px;
+  font-family: 'Poppins', sans-serif;
+}
+.nav_items a:hover{
+  border-bottom: solid 2px white;
+}
+
+.banner{
+  height: auto;
+  transform: translateY(10%);
+  width: 100vw;
+  color: white;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 3% 9%;
+  padding-bottom: 10%;
+  background-image: url(./img/back.jpg);
+  clip-path: polygon(0% 0%,100% 0%,100% 88%,0% 100%);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.banner_text{
+  display: flex;
+  justify-content: center;
+  padding: 4% 3%;
+  width: 60%;
+}
+.banner_img{
+  height: auto;
+  width: 40%;
+  padding: 2% 4%;
+  padding-top: 12%;
+}
+.banner_img img{
+  width: 80%;
+  border-radius: 50%;
+  animation: rotating_img 1.8s ease-in-out;
+}
+.banner_text .text{
+  font-family: 'Poppins', sans-serif;
+  width: 100%;
+}
+.banner_text .text .intro{
+  font-size: 7vh;
+  animation: name_animation 1.5s ease-in-out;
+}
+
+.banner_text .text h4{
+  font-family: 'Poppins',cursive;
+  font-weight: lighter;
+  letter-spacing: 0.7px;
+}
+.banner_text .text p{
+  margin-top: 30px;
+  color: #eee;
+  font-size: 14px;
+}
+
+.journey{
+  transform: translateY(7%);
+  width: 100vw;
+  z-index: -100;
+  color: black;
+  height: auto;
+  background-color: #eee;
+  font-family: 'Poppins', sans-serif;
+  padding: 0% 10%;
+  padding-bottom: 9%;
+}
+
+.journey h1{
+  text-align: center;
+  font-family: 'Poppins',cursive;
+  font-size: 40px;
+  font-weight: 2200;
+}
+.journey h2{
+  font-size: 28px;
+}
+.timeline{
+  padding-top: 26px;
+  padding-bottom: 26px;
+}
+.timeline_first,.timeline_second,.timeline_third{
+  display: flex;
+}
+.timeline_second,.timeline_third{
+  margin-top: 35px;
+}
+.timeline span{
+  margin-top: 8%;
+  float: right;
+}
+.timeline_left{
+  width: 35%;
+  padding-right: 2%;
+}
+.timeline_right{
+  border-left: black 1.5px solid;
+  padding-left: 25px;
+  /* margin-left: 15px; */
+  padding-right: 25px;
+}
+.achievement_container{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.achievement_item{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: #eee 2px solid;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.29);
+  height: 250px;
+  width: 250px;
+  margin: 30px 20px;
+  border-radius: 25px;
+  padding: 0% 2%;
+  text-align: center;
+}
+.achievement_item p{
+  margin-top: 10%;
+}
+.achievement_item p img{
+  height: 110px;
+  transform: translateY(-9px);
+  display: block;
+}
+.skills{
+  height: auto;
+  transform: translateY(7%);
+  background-color: white;
+  color: black;
+  font-family: 'Poppins',cursive;
+  padding: 1% 10%;
+  padding-bottom: 7%;
+}
+.skills h1{
+  text-align: center;
+  font-size: 40px;
+  margin-top: 18px;
+  font-weight: 2200;
+}
+.skill{
+  border: solid 2px #7b03fc;
+  padding: 2% 3%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  margin-top: 35px;
+}
+.skill_text{
+  width: 60%;
+  padding: 2% 2%;
+}
+.skill_img{
+  width: 40%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.skills h2{
+  margin-bottom: 14px;
+}
+
+.skill_img i{
+  font-size: 8.1vw;
+}
+
+.html_img{
+  width: 33%;
+}
+.css_image{
+  width: 24%;
+}
+.js_image{
+  width: 29%;
+  margin-top: 5%;
+}
+.react_img{
+  width: 32%;
+}
+.node_img{
+  width: 32%;
+}
+.coding_img{
+  width: 28%;
+  transform: scale(1.3);
+}
+.skill_img i{
+  color: #eee;
+}
+
+
+.connect{
+  height: auto;
+  font-family: 'Poppins',cursive;
+  background-color: white;
+  padding: 6% 12%;
+  padding-bottom: 8%;
+}
+.connect_heading h2{
+  color: #7b03fc;
+  font-size: 40px;
+}
+.connect_heading h3{
+  color: black;
+  font-size: 27px;
+}
+.connect_content{
+  border: #7b03fc 2px solid;
+  border-radius: 15px;
+  color: black;
+  margin-top: 5%;
+  padding: 6%;
+  display: flex;
+  justify-content: space-around;
+}
+.connect_content .content_text{
+  padding-top: 2%;
+  width: 50%;
+}
+.content_text a{
+  text-decoration: none;
+  color: black;
+}
+.content_text i:hover{
+  transform: scale(1.2);
+}
+.content_text i{
+  margin: 2.2%;
+}
+.content_img{
+  /* display: flex; */
+}
+.content_img img{
+  width: 28vw;
+}
+
+@media (max-width:940px){
+  .journey{
+    transform: translateY(5.5%);
+  }
+  .skills{
+    transform: translateY(8.5%);
+  }
+  .projects{
+    transform: translateY(10.5%);
+  }
+  .connect{
+    transform: translateY(10%);
+  }
+}
+
+@media (max-width:960px){
+  .banner_img img{
+    width: 87%;
+    border-radius: 50%;
+  }
+  .banner_img{
+    padding-top: 23%;
+  }
+}
+
+@media (max-width:471px){
+  .card{
+    height: 240px;
+    width: 208px;
+    margin-bottom: 10%;
+  }
+}
+
+@media (max-width:648px){
+  .projects{
+    transform: translateY(6%);
+  }
+})
+
+@media (max-width:830px) and (min-width:630px){
+  .banner{
+    transform: translateY(8.5%);
+  }
+  .projects{
+    transform: translateY(12%);
+  }
+}
+
+@media (max-width:800px){
+  .banner_img img{
+    width: 96%;
+  }
+}
+
+@media (max-width:630px){
+  .banner{
+    flex-direction: column;
+    height: auto;
+    width: 100vw;
+    transform: translateY(6.5%);
+    /* position: absolute; */
+    /* top: 14%; */
+    clip-path: polygon(0% 0%,100% 0%,100% 94%,0% 100%);
+  }
+  .banner_text{
+    order: 1;
+    height: auto;
+    width: 100%;
+  }
+  .banner_img{
+    width: 80%;
+    text-align-last: center;
+    margin: auto;
+    padding-top: 12%;
+    height: auto;
+  }
+  .banner_img img{
+    width: 75%;
+  }
+  .banner_text .text{
+    height: auto;
+  }
+  .achievement_item i{
+    size: 20px;
+  }
+  .skill_img{
+    margin-top: 15px;
+    width: 74%;
+  }
+  .skill_text{
+    width: 100%;
+  }
+  .down{
+    order: 2;
+  }
+  .connect_content{
+    flex-direction: column-reverse;
+  }
+  .connect_content .content_text{
+    width: 100%;
+  }
+  .connect_content .content_img{
+    width: 100%;
+    margin-bottom: 6%;
+    display: flex;
+    justify-content: center;
+  }
+  .content_img img{
+    width: 52vw;
+  }
+}
+
+@keyframes rotating_img{
+  0%{
+    transform: translateX(200%) rotateZ(180deg);
+    opacity: 0;
+  }
+  100%{
+    transform: translateX(0%) rotateZ(0deg);
+    opacity: 1;
+  }
+}
+@keyframes name_animation{
+  0%{
+    opacity: 0;
+    transform: translateX(-200%);
+  }
+  100%{
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
